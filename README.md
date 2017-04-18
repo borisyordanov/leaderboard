@@ -1,1 +1,1 @@
-"# leaderboard" 
+Leaderboard App for FCC

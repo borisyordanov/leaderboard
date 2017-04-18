@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LeaderboardApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>FCC Leaderboard AngularJS App</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="app.css" />
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="UserListController">
+
+  <div class="flex-parent">
+
+    <h1><span class="fcc">freeCodeCamp</span><img src="https://avatars2.githubusercontent.com/u/9892522?v=3&s=400">Leaderboard</h1>
+
+    <form>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+          <input type="text" class="form-control" placeholder="Search for leaders" ng-model="search">
+        </div>
+      </div>
+    </form>
+
+    <table id="result" border="1" class="table table-bordered table-hover table-condensed">
+
+      <thead>
+        <tr>
+          <th>№</th>
+          <th ng-click="sort = 'username'; sortReverse = !sortReverse">Username
+            <span ng-show="sort == 'username' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sort == 'username' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th ng-click="sort = 'recent'; sortReverse = !sortReverse">Past 30 Days
+            <span ng-show="sort == 'recent' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sort == 'recent' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th ng-click="sort = 'alltime'; sortReverse = !sortReverse">All Time
+            <span ng-show="sort == 'alltime' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sort == 'alltime' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="user in users | orderBy:sort:sortReverse | filter:search">
+          <td align="center">{{ $index + 1 }}</td>
+          <td><img ng-src="{{user.img}}"><span class="user">{{user.username}}</span></td>
+          <td align="center">{{user.recent}}</td>
+          <td align="center">{{user.alltime}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</body>
+
+</html>

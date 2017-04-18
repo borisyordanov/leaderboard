@@ -1,0 +1,98 @@
+@font-face {
+  font-family: Sax;
+  src: url(saxmono.ttf);
+}
+
+body {
+  background-color: #4682b4;
+}
+
+.flex-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  height: 50px;
+  width: auto;
+}
+table img {
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #000;
+}
+
+table {
+  width: 50vw !important;
+  border: 1px solid #4682b4;
+}
+
+h1 {
+  width: 50vw;
+  text-align: center;
+  background-color: #006400;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 5px;
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  vertical-align: middle !important;
+}
+
+.user {
+  padding-left: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #a9a9a9;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff8dc;
+}
+
+.fcc {
+  font-family: "Sax";
+}
+
+form {
+  width: 50vw;
+}
+
+tr th:nth-of-type(1) {
+  width: 5vw;
+}
+
+tr td:nth-of-type(1) {
+  width: 5vw;
+}
+
+tr th:nth-of-type(2) {
+  width: 25vw;
+}
+
+tr td:nth-of-type(2) {
+  width: 25vw;
+}
+
+tr th:nth-of-type(3) {
+  width: 10vw;
+}
+
+tr td:nth-of-type(3) {
+  width: 10vw;
+}
+
+tr th:nth-of-type(4) {
+  width: 10vw;
+}
+
+tr td:nth-of-type(4) {
+  width: 10vw;
+}

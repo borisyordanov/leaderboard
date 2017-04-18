@@ -6,7 +6,7 @@ LeaderboardApp.controller('UserListController', function PhoneListController($sc
   $scope.sort = 'alltime';
   $scope.sortReverse = false;
 
-  $http.get("http://fcctop100.herokuapp.com/api/fccusers/top/recent")
+  $http.get("https://fcctop100.herokuapp.com/api/fccusers/top/recent")
     .then(response => {
 
       var data = response.data;

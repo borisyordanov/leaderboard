@@ -1,0 +1,15 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "app/bower_components/angular-animate/package.json",
+        "app/bower_components/angular-mocks/package.json",
+        "app/bower_components/angular-resource/package.json",
+        "app/bower_components/angular-route/package.json",
+        "app/bower_components/angular/package.json",
+        "app/bower_components/bootstrap/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
